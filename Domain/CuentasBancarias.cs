@@ -136,13 +136,11 @@ namespace Dsw2025Ej8.Domain
             // Operaciones de prueba con manejo de excepciones
             void Ejecutar(Action accion, string descripcion)
             {
-                try
-                {
+                try {
                     accion();
                     Console.WriteLine($"OK: {descripcion}");
                 }
-                catch (Exception ex)
-                {
+                catch (Exception ex) {
                     Console.WriteLine($"Error ({descripcion}): {ex.Message}");
                 }
             }
